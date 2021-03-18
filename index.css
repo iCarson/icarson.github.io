@@ -19,6 +19,10 @@ p {
   padding: 0;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 #clock {
   width: 100%;
   height: 100%;
@@ -50,6 +54,9 @@ p {
 }
 #clock .date div {
   display: flex;
+}
+#clock .date .month {
+  margin-right: 2vh;
 }
 
 /*# sourceMappingURL=index.css.map */

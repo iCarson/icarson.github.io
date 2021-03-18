@@ -28,7 +28,7 @@ p{
   align-items: center;
   .time{
     display: flex;
-    font-size: 20vw;
+    font-size: 23vw;
     position: relative;
     padding-right: 5vw;
     color: rgba($color: #FFF, $alpha: .6);
@@ -36,7 +36,7 @@ p{
       content: '';
       display: block;
       width: .5vw;
-      height: 15vw;
+      height: 17vw;
       background: rgba($color: #FFF, $alpha: .5);
       position: absolute;
       right: 0;
@@ -46,7 +46,7 @@ p{
   }
   .date{
     padding-left: 5vw;
-    font-size: 7.5vw;
+    font-size: 9vw;
     div{
       display: flex;
     }

@@ -32,7 +32,7 @@ p {
 }
 #clock .time {
   display: flex;
-  font-size: 20vw;
+  font-size: 23vw;
   position: relative;
   padding-right: 5vw;
   color: rgba(255, 255, 255, 0.6);
@@ -41,7 +41,7 @@ p {
   content: "";
   display: block;
   width: 0.5vw;
-  height: 15vw;
+  height: 17vw;
   background: rgba(255, 255, 255, 0.5);
   position: absolute;
   right: 0;
@@ -50,7 +50,7 @@ p {
 }
 #clock .date {
   padding-left: 5vw;
-  font-size: 7.5vw;
+  font-size: 9vw;
 }
 #clock .date div {
   display: flex;

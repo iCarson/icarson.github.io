@@ -8,6 +8,57 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  clock
+  <div id="clock">
+    
+    <div class="time">
+      <p class="hour">{{ hour }}</p>
+      <p class="sep">:</p>
+      <p class="minute">{{ minute }}</p>
+    </div>
+    
+    <div class="date">
+      <p class="week">{{ week }}</p>
+      <div>
+        <p class="month">{{ month }}</p>
+        <p class="day">{{ day }}</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script>
+    var clock = new Vue({
+        el: '#clock',
+        data: {
+            hour: '',
+            minute: '',
+            week:'',
+            month: '',
+            day:''
+        }
+    });
+
+    var week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+    var month = ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+    var timerID = setInterval(updateTime, 1000);
+    updateTime();
+    function updateTime() {
+        var cd = new Date();
+        clock.hour = zeroPadding(cd.getHours(), 2) 
+        clock.minute = zeroPadding(cd.getMinutes(), 2)
+        clock.week = week[cd.getDay()];
+        clock.month = month[cd.getMonth()]
+        clock.day = zeroPadding(cd.getDate(), 2)
+    };
+
+    function zeroPadding(num, digit) {
+        var zero = '';
+        for(var i = 0; i < digit; i++) {
+            zero += '0';
+        }
+        return (zero + num).slice(-digit);
+    }
+  </script>
 </body>
 </html>

@@ -1,8 +1,52 @@
-*{
+@font-face {
+  font-family: number;
+  src: url(clock-number.f0c47848.ttf);
+}
+body,
+html {
+  font-family: number;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+  color: rgba($color: #FFF, $alpha: .5);
+}
+p{
   margin: 0;
   padding: 0;
-  color: #FFF;
 }
-body{
-  background: black;
+#clock{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .time{
+    display: flex;
+    font-size: 40vh;
+    position: relative;
+    padding-right: 10vh;
+    color: rgba($color: #FFF, $alpha: .6);
+    &::after{
+      content: '';
+      display: block;
+      width: 1vh;
+      height: 30vh;
+      background: rgba($color: #FFF, $alpha: .5);
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .date{
+    padding-left: 10vh;
+    font-size: 15vh;
+    div{
+      display: flex;
+    }
+
+  }
 }

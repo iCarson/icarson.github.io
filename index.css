@@ -32,16 +32,16 @@ p {
 }
 #clock .time {
   display: flex;
-  font-size: 40vh;
+  font-size: 20vw;
   position: relative;
-  padding-right: 10vh;
+  padding-right: 5vw;
   color: rgba(255, 255, 255, 0.6);
 }
 #clock .time::after {
   content: "";
   display: block;
-  width: 1vh;
-  height: 30vh;
+  width: 0.5vw;
+  height: 15vw;
   background: rgba(255, 255, 255, 0.5);
   position: absolute;
   right: 0;
@@ -49,14 +49,14 @@ p {
   transform: translateY(-50%);
 }
 #clock .date {
-  padding-left: 10vh;
-  font-size: 15vh;
+  padding-left: 5vw;
+  font-size: 7.5vw;
 }
 #clock .date div {
   display: flex;
 }
 #clock .date .month {
-  margin-right: 2vh;
+  margin-right: 1vw;
 }
 
 /*# sourceMappingURL=index.css.map */
